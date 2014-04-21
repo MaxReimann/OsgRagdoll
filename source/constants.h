@@ -1,0 +1,72 @@
+#pragma once
+namespace ragdoll
+{
+
+#define PI 3.1415926535897932384626433832795L
+#define PI2  (PI * 2.00L)
+#define PI_2 (PI * 0.50L)
+#define PI4  (PI * 4.00L)
+#define PI_4 (PI * 0.25L)
+
+
+#define CONSTRAINT_DEBUG_SIZE 0.05
+#define SHAPE_SIZE_MULTIPLIER 1.0
+
+
+	enum BODYPART
+	{
+		BODYPART_PELVIS = 0,
+		BODYPART_SPINE,
+		BODYPART_HEAD,
+
+		BODYPART_LEFT_UPPER_LEG,
+		BODYPART_LEFT_LOWER_LEG,
+
+		BODYPART_RIGHT_UPPER_LEG,
+		BODYPART_RIGHT_LOWER_LEG,
+
+		BODYPART_LEFT_UPPER_ARM,
+		BODYPART_LEFT_LOWER_ARM,
+
+		BODYPART_RIGHT_UPPER_ARM,
+		BODYPART_RIGHT_LOWER_ARM,
+
+		BODYPART_COUNT
+	};
+	//declare extern to allow definition in cpp file
+	extern char *bodyPartNames[BODYPART_COUNT];
+
+
+	enum
+	{
+		JOINT_PELVIS_SPINE = 0,
+		JOINT_SPINE_HEAD,
+
+		JOINT_LEFT_HIP,
+		JOINT_LEFT_KNEE,
+
+		JOINT_RIGHT_HIP,
+		JOINT_RIGHT_KNEE,
+
+		JOINT_LEFT_SHOULDER,
+		JOINT_LEFT_ELBOW,
+
+		JOINT_RIGHT_SHOULDER,
+		JOINT_RIGHT_ELBOW,
+
+		JOINT_COUNT
+	};
+
+	//forward declarations
+	class RagdollView;
+	class RagdollModel;
+	class ModelBone;
+	class BoneMotionState;
+
+
+}
+
+
+
+
+
